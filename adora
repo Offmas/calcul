@@ -1,18 +1,23 @@
 import java.util.Scanner;
 public class Main {
     static double resultado;
+
     public static void main(String[] args) {
-        short operacao;
+        short num3;
         double num1, num2;
         Scanner input = new Scanner(System.in);
 
-            System.out.println("bem vindo, digite a operação desejada");
-            System.out.println("1) Soma");
-            System.out.println("2) Subtração");
-            System.out.println("3) Multiplicação");
-            System.out.println("4) Divisão");
-            System.out.println("Operação: ");
-        int num3= input.nextInt();
+
+        do {
+            System.out.println("bem vindo, digite a operação desejada \n 1) Soma \n 2) Subtração \n 3) Multiplicação \n 4) Divisão \n Operação:");
+            num3 = input.nextShort();
+            if (num3 >= 5) {
+                System.out.println("Operação inválida");
+            }
+        }
+        while (num3 >= 5);
+
+
 
 
             System.out.println("Digite o primeiro valor");
@@ -22,31 +27,29 @@ public class Main {
             num2 = input.nextDouble();
 
 
-            switch (num3)
-            {
+            switch (num3) {
                 case 1:
-                    resultado = num1+num2;
+                    resultado = num1 + num2;
                     break;
 
 
                 case 2:
-                    resultado = num1-num2;
+                    resultado = num1 - num2;
                     break;
 
 
                 case 3:
-                    resultado = num1*num2;
+                    resultado = num1 * num2;
                     break;
 
 
                 case 4:
-                    resultado = num1/num2;
+                    resultado = num1 / num2;
                     break;
 
-
             }
-        System.out.println("o resultado é:"+ resultado);
-        }
-    }
+            System.out.println("o resultado é:" + resultado);
 
+    }
+}
 
