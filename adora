@@ -30,25 +30,29 @@ public class Main {
             switch (num3) {
                 case 1:
                     resultado = num1 + num2;
+                    System.out.println(" o resultado de: " + num1 +" + " + num2 + " é igual a: "+ resultado);
                     break;
 
 
                 case 2:
                     resultado = num1 - num2;
+                    System.out.println(" o resultado de: " + num1 +" - " + num2 + " é igual a: "+ resultado);
                     break;
 
 
                 case 3:
                     resultado = num1 * num2;
+                    System.out.println(" o resultado de: " + num1 +" X " + num2 + " é igual a: "+ resultado);
                     break;
 
 
                 case 4:
                     resultado = num1 / num2;
+                    System.out.println("o resultado de: " + num1 +" dividido por " + num2 + " é igual a: "+ resultado);
                     break;
 
             }
-            System.out.println("o resultado é:" + resultado);
+
 
     }
 }
