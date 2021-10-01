@@ -1,0 +1,26 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        int cod2, num2, cod4, num4;
+        double valor2, valor4, valorTotal;
+        System.out.print("Insira o código do produto: ");
+        cod2 = sc.nextInt();
+        System.out.print("insira a quantidade que foi vendida: ");
+        num2 = sc.nextInt();
+        System.out.print("Insira o valor unitário do produto: ");
+        valor2 = sc.nextDouble();
+        System.out.print("Insira o código do produto: ");
+        cod4 = sc.nextInt();
+        System.out.print("insira a quantidade que foi vendida: ");
+        num4 = sc.nextInt();
+        System.out.print("Insira o valor unitário do produto: ");
+        valor4 = sc.nextDouble();
+        valorTotal = (num2 * valor2) + (num4 * valor4);
+        System.out.printf("Os respectivos códigos dos produtos é %s e %s %n O valor total da compra é : %.2f", cod2, cod4, valorTotal );
+    }
