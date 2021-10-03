@@ -1,0 +1,69 @@
+import com.company.produto.Produtos;
+import java.util.Locale;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        int codigo;
+        double valor, quantidade, valordog = 0, quantidade2, quantidade3, quantidade4, valortorrada = 0, valorbacon = 0, valorRefri = 0, valorsalada = 0, quantidade5;
+        String nome;
+
+
+        Produtos dog = new Produtos ("Hot Dog", 4.00, 1);
+        Produtos salada = new Produtos ("X-Salada", 4.50,2);
+        Produtos bacon = new Produtos ("X-Bacon", 5.00, 3);
+        Produtos torrada = new Produtos ("Torrada Simples",2.00, 4);
+        Produtos refri = new Produtos ("Refrigerantes", 2.00, 5);
+
+        do {
+            valor = valorRefri + valorbacon + valordog + valorsalada + valortorrada;
+            System.out.printf("Para somar a compra digite 0 %nInsira o código do produto: ");
+            codigo = sc.nextInt();
+
+            switch (codigo) {
+                case 1:
+                    System.out.printf("Quantos %s foram vendidos: ", dog.getNome());
+                    quantidade = sc.nextDouble();
+                    valordog = quantidade * dog.getValor();
+                    break;
+
+
+                case 2:
+                    System.out.printf("Quantos %s foram vendidos: ", salada.getNome());
+                    quantidade2 = sc.nextDouble();
+                    valorsalada = quantidade2 * salada.getValor();
+                    break;
+
+                case 3:
+                    System.out.printf("Quantos %s foram vendidos: ", bacon.getNome());
+                    quantidade3 = sc.nextDouble();
+                    valorbacon = quantidade3 * bacon.getValor();
+                    break;
+
+                case 4:
+                    System.out.printf("Quantos %s foram vendidos: ", torrada.getNome());
+                    quantidade4 = sc.nextDouble();
+                    valortorrada = quantidade4 * torrada.getValor();
+                    break;
+
+                case 5:
+                    System.out.printf("Quantos %s foram vendidos: ", refri.getNome());
+                    quantidade5 = sc.nextDouble();
+                    valorRefri = quantidade5 * refri.getValor();
+                    break;
+
+
+
+                }
+                if (codigo == 0) {
+                    System.out.print("o Valor da compra é: R$"+ valor);
+                }
+            }
+        while (codigo !=0);
+
+        }
+    }
